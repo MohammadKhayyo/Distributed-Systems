@@ -1,0 +1,333 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+img{
+  height: 200px;
+  width: 200px;
+}
+.animals_name_img{
+  display: flex;
+  flex-direction: column;
+  margin:5px
+}
+.All_animals{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.edit{
+  display: flex;
+  flex-direction: row;
+}
+.Name{
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Poppins', sans-serif;
+}
+.The_Date{
+  justify-content: flex-end;
+  right: 5px;
+  position: absolute;
+}
+.buttons_flex{
+  justify-content: center;
+}
+.text{
+  text-align:center;
+  justify-content: center;
+  display: flex;
+  font-size: xx-large;
+}
+.buttons{
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+
+.text {
+  font-size: calc( 1em + 5vmin );
+  font-weight: 900;
+  color: #4791ff;
+  --x-offset: -0.0625em;
+  --y-offset: 0.0625em;
+  --stroke: 0.025em;
+  --background-color: white;
+  --stroke-color: lightblue;
+  text-shadow: var(--x-offset) var(--y-offset) 0px #513333, calc( var(--x-offset) - var(--stroke) ) calc( var(--y-offset) + var(--stroke) ) 0px var(--stroke-color);
+  padding: 5px;
+}
+
+@supports ( text-shadow: 1px 1px 1px 1px black ) {
+  .text {
+    text-shadow:
+      
+      var(--x-offset)
+      var(--y-offset)
+      0px
+      0px
+      var(--background-color), 
+      
+      var(--x-offset) 
+      var(--y-offset)
+      var(--stroke)
+      0px
+      var(--stroke-color);
+    
+  }
+}
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #68b0f3;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.header {
+  position:relative;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  width:100%;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  margin-bottom:-7px; /*Fix for safari gap*/
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
+.MyName {
+position: relative;
+left: 300px;
+top: 29px;
+transform: translate(-50%, -50%);
+display: block;
+color: #1b8dcf;
+font-size: 50px;
+letter-spacing: 8px;
+
+}
+
+.MyName::after {
+content: "Mohammad Khayyo";
+position: absolute;
+color: transparent;
+background-image: repeating-linear-gradient(
+  135deg,
+  transparent 0,
+  transparent 2px,
+  rgb(255, 255, 255) 2px,
+  rgb(255, 255, 255) 4px
+);
+-webkit-background-clip: text;
+top: 0px;
+left: 0px;
+transition: 1s;
+}
+
+.MyName:hover:after {
+top: -3px;
+left: -3px;
+}
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 30px 61px;
+  border-radius: 4px;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 25px;
+  font-family: "Roboto", sans-serif;
+  filter: hue-rotate(0deg);
+  border: 2px solid #d2bdff;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.button:hover {
+  border: 1px solid transparent;
+}
+.button:hover span {
+  position: absolute;
+  display: block;
+}
+.button:hover span:nth-child(1) {
+  filter: hue-rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #3a86ff);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.button:hover span:nth-child(2) {
+  filter: hue-rotate(60deg);
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #3a86ff);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.button:hover span:nth-child(3) {
+  filter: hue-rotate(120deg);
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(270deg, transparent, #3a86ff);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+    height: 3px;
+  }
+  50%, 100% {
+    height: 2px;
+    right: 100%;
+  }
+}
+.button:hover span:nth-child(4) {
+  filter: hue-rotate(300deg);
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #3a86ff);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+.button_Number{
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 900;
+  cursor: pointer;
+}
+.click{
+  cursor: pointer;
+}
+.title{
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.answer{
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #68b0f3;
+  font-size: large;
+  font-weight: bolder;
+}

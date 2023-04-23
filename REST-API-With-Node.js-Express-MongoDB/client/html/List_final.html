@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List</title>
+    <link rel="stylesheet" href="../css/List_final.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../js/final_list.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.3.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <h2 id="WEB_NAME">Best2Watch</h2>
+    <div id="flex_ADD_Movie">
+      <input
+        class="Buttons_style Other_button Add_button"
+        type="button"
+        value="+ Add Movie"
+      />
+      <input
+        class="Buttons_style Other_button Add_Actor_button_withoutMovie"
+        type="button"
+        value="+ Add Actor"
+      />
+    </div>
+    <p id="demo"></p>
+    <div id="flex_ADD_Movie">
+      <input
+        class="Buttons_style Other_button Add_button"
+        type="button"
+        value="+ Add Movie"
+      />
+      <input
+        class="Buttons_style Other_button Add_Actor_button_withoutMovie"
+        type="button"
+        value="+ Add Actor"
+      />
+    </div>
+    <div class="Alert_full_cover">
+      <div class="Alert_message_container center">
+        <span class="Alert_message_span">Edit the Movie</span>
+        <div class="Alert_message_buttons_container">
+          <form id="Fild_to_New" name="Fild_to_New" method="POST">
+            <div id="name-group" class="form-group">
+              <label for="name">Media Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                id="name"
+                placeholder="Write Name here"
+                value=""
+                required
+              />
+            </div>
+            <div id="picture-group" class="form-group">
+              <label for="picture">Picture URL</label>
+              <input
+                type="picture"
+                class="form-control"
+                name="picture"
+                id="picture"
+                placeholder="Write URL Picture here"
+                value=""
+                required
+              />
+            </div>
+            <div id="director-group" class="form-group">
+              <label for="director">Director Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="director"
+                id="director"
+                placeholder="Write Name director here"
+                value=""
+                required
+              />
+            </div>
+            <div id="date-group" class="form-group">
+              <label for="date">Release Date</label>
+              <input
+                type="date"
+                class="form-control"
+                name="date"
+                id="date"
+                placeholder="Write New Date here"
+                type="date"
+                value=""
+                required
+              />
+            </div>
+            <div id="rating-group" class="form-group">
+              <label for="rating">Rating</label>
+              <input
+                type="number"
+                max="5"
+                min="1"
+                class="form-control"
+                name="rating"
+                id="rating"
+                placeholder="Type rating between 1 to 5"
+                value=""
+                required
+              />
+            </div>
+            <div id="isSeries-group" class="form-group">
+              <label for="isSeries">Is Series? </label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="isSeries"
+                id="isSeries"
+                placeholder="true/false"
+              />
+            </div>
+            <div class="Series_info">
+              <div id="Season-series-group" class="form-group">
+                <label for="Season">Season: </label>
+                <input
+                  type="number"
+                  min="1"
+                  value="1"
+                  class="form-control"
+                  name="season"
+                  id="season"
+                  placeholder="Type season"
+                />
+              </div>
+              <div class="Episode-group">
+                <div id="episode-series-group" class="form-group">
+                  <label for="episode">Season 1 episode num: </label>
+                  <input
+                    type="number"
+                    min="1"
+                    value="1"
+                    class="form-control Episode"
+                    name="episode_0"
+                    id="episode_0"
+                    placeholder="Type episode"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+          <div id="buttons_container">
+            <input
+              type="button"
+              class="Alert_message_button Alert_message_yes"
+              value="Yes"
+            />
+            <input
+              type="button"
+              class="Alert_message_button Alert_message_no"
+              value="No"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Alert_full_cover_2">
+      <div class="Alert_message_container_2 center">
+        <span class="Alert_message_span_2">Actors List</span>
+        <div class="Alert_message_buttons_container_2">
+          <div class="Actor-group"></div>
+          <div id="buttons_container">
+            <input
+              type="button"
+              class="Alert_message_button Alert_message_Close"
+              value="Close"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
